@@ -1,0 +1,54 @@
+task_description: 'Teach the model on SAP data'
+created_by: yosimass
+domain: sap
+seed_examples:
+ - question: How do I enter initial stock data for a material?
+   answer: |
+     To enter initial stock data for a material, you can follow these steps:
+     1. Open the  Stock Item Data sheet.
+     2. Enter the quantity and price of the material.
+     3. If you are valuating the material at a standard price, enter the standard price in the  External Amount in Local Currency field.
+     4. If you are valuating the material at a moving average price, enter the moving average price in the  External Amount in Local Currency field.
+     5. Save your changes.
+     By following these steps, you can enter initial stock data for a material.
+ - question: What is warehouse stock?
+   answer: |
+     Warehouse stock is goods that are physically stored in a warehouse. 
+     The warehouse stock is an entity that describes the goods with information 
+     such as the name of the product, the quantity, batch information, 
+     packaging information, and storage bin.
+ - question: How do I specify whether batch management is active by default?
+   answer: |
+     You can specify whether batch management is active by default by using the "Manage Your Solution" app. Open the app and choose "Configure Your Solution." The "Specify Batch Management Default by Plant" setting lets you activate or deactivate batch management by default for specific plants.
+     During the migration process, the logic is as follows:
+     If your product is managed in batches, set the "Batch management requirement indicator" in the "Basic Data" sheet of the migration template. If you make an entry in this field, the system automatically sets the "Batch management requirement indicator" for all plants defined in the "Plant Data" sheet for this product. This applies to all plants that aren't flagged accordingly.
+ - question: How do I work with the Variants tab?
+   answer: |
+     To work with the Variants tab, you can follow these steps:
+     1. Review the data variants used in a test plan.
+     2. Select a variant to view the details of the data variants used in a test plan.
+     3. Expand or collapse a test plan and the process steps involved.
+     4. View the details of the data variants used in a test plan.
+     5. Edit the process step.
+     6. Expand all the process steps of a test plan that is listed on the pane.
+     7. Collapse all the process steps of a test plan that is listed on the pane.
+     8. Expand all the process steps of the test plans that are listed on the pane.
+     9. Collapse all the process steps of the test plans that are listed on the pane.
+     10. Bind test data container fields with the process step.
+ - question: How do I translate a page?
+   answer: |
+     To translate a page, you can follow these steps:
+     1. Open the Manage Launchpad Pages app and then open the page in edit mode.
+     2. Select  Translate and  Download. In the opening dialog, select one or more languages, to that this page should be translated. Click on  Download.
+     3. A zip file with an XML file for each selected language will be created and saved on your computer.
+     4. The folder name contains the page ID, the system name and the export date. The file name of the exported XML file consists of the language codes of source and target language and the page name, i. e. EN_DE_ZBR_PRODN_ACCOUNTANT.xml.
+     5. The XML file contains the translatable text for the selected page: the page title and the section titles. If some text is already translated, the translated text is also exported.
+     6. Translate the texts and then pack the the XML files in a zip file. Note that you should only compress the files, not a folder.
+     7. You don't have to import the files all at the same time, you can import one or more language files first and repeat the import later for other languages.
+     8. Then you have to import the .zip folder in the Manage Launchpad Pages app. Open the page you have translated in the edit mode. Then select  Translate and  Upload. Select the .zip folder. The translations are imported.
+     See [Translating a Space]  for further information.
+document:
+ repo: git@github.com:YosiMass/knowledge-infusion.git
+ commit: ef179b04a27ca087c1d2190a940b4aae2bd16bec
+ patterns:
+   - "sap-v2-passages-md/*.md"
