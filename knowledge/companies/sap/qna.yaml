@@ -1,4 +1,4 @@
-task_description: 'Teach the model knowledge on SAP data'
+task_description: 'knowledge infusion on SAP data'
 created_by: yosimass
 domain: sap
 seed_examples:
